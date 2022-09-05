@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ListadoPokemons from "./components/ListadoPokemons";
+import VistaPokemon from "./components/VistaPokemon";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./styles.css";
+import BuscarPokemon from "./components/BuscarPokemon";
+
+export default function App() {
+
+    // Vamos a necesitar crear la store, con el estado inicial y configurar el provider para que toda
+    // nuestra aplicacion tenga acceso al estado de Redux
+
+    return (
+        <div className="App">
+            <h1>Pokédex</h1>
+            <div id="bandejaDeEntrada">
+                <div style={{display: 'flex', flexDirection:'column', flexGrow: 1}}>
+                    <BuscarPokemon />
+                    <div style={{display: 'flex', flexDirection:'row'}}>
+                        <ListadoPokemons/>
+                        <VistaPokemon />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
-
-export default App;

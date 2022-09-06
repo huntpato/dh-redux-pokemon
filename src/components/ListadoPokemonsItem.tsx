@@ -12,7 +12,6 @@ interface ListadoPokemonsItemProps {
 
 /**
  * Visualiza una pokemon con su nombre y url
- *
  * @param pokemon el pokemon a mostrar
  * @param seleccionarPokemon una funcion que se ejecuta al hacer click en el pokemon
  */

@@ -1,15 +1,14 @@
 import {combineReducers} from "@reduxjs/toolkit";
+import pokemonReducer from "../reducers/pokemonReducer";
 import { createStore, compose } from 'redux';
 
 const rootReducer = combineReducers({
-    // TODO add your reducer here
+    pokemon: pokemonReducer,
 });
 
-// Definimos un tipo para nuestra store o estado global
 export type IRootState = ReturnType<typeof rootReducer>;
 
 
-// Con esto declaramos los tipos del objeto window para poder obtener las ventajas de la redux extension
 declare global {
     interface Window {
         __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;

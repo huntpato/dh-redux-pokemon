@@ -1,9 +1,9 @@
+import {Sprite} from "../types/sprite.types";
+
 /**
  * Represents a pokemon
- *
  * @see https://pokeapi.co/api/v2/item-category
  */
- import {Sprite} from "../types/sprite.types";
 
  export interface Pokemon {
      name: string;

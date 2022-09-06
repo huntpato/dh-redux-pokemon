@@ -13,5 +13,6 @@ export const buscarPokemons = async (pokemonName: string): Promise<Pokemon[]> =>
 
 export const getPokemon = async (pokemonName: string): Promise<PokemonWithProps> => {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`);
-    return await response.json();
+    const data = await response.json();
+    return data;
 };

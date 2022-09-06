@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { buscarPokemon } from "../actions/pokemonsActions";
 
 const BuscarPokemon = () => {
 
-    // No olvidemos agregar el hook de redux para obtener el acceso al objeto dispatch
+    const [ search, setSearch ]= useState<string>("")
+    // hook de redux para obtener el acceso al objeto dispatch
+    const dispatch = useDispatch();
 
     const onBuscarClick = () => {
-        // Aqui debemos despachar una acción utilizando el dispatch proveniente del hook de redux
-        // Lo ideal seria crear una action con su tipo, en un archivo actions.
+        // despachar una acción utilizando el dispatch proveniente del hook de redux
+        dispatch(buscarPokemon(search))
     }
 
     return (
         <div id="buscarPokemon">
             <label>Buscar pokemon</label>
-            <input type="text" placeholder={"Pikachu, Charmander, Ditto, etc"}/>
+            <input type="text" placeholder={"Pikachu, Charmander, Ditto, etc"} onChange={ (e) => setSearch(e.target.value) }/>
             <button onClick={() => onBuscarClick()}>Buscar</button>
         </div>
     );

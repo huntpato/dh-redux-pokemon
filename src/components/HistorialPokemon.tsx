@@ -19,7 +19,7 @@ const HistorialPokemon = () => {
             <h3>Historial</h3>
             {pokemons && pokemons.map((pokemon: PokemonWithProps) => (
                 <div style={{display: 'flex', cursor: 'pointer'}} onClick={() => onSelectPokemon(pokemon)}>
-                    <img src={pokemon.sprites.default} />
+                    <img src={pokemon.sprites.front_default} />
                     <div style={{display: 'flex', flexDirection:'column'}}>
                         <p>{pokemon.name}</p>
                         <small>#{pokemon.id}</small>

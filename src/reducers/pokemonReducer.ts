@@ -7,7 +7,7 @@ export type PokemonState = {
     pokemonSeleccionado: Pokemon | null;
 }
 
-const initialState = {
+const initialState: PokemonState = {
     busqueda: '',
     historial: [],
     pokemonSeleccionado: null,

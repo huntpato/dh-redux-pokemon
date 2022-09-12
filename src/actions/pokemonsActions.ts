@@ -35,3 +35,5 @@ export const agregarHistorialPokemon = (pokemon: PokemonWithProps): AgregarHisto
         payload: {pokemon: pokemon}
     }
 }
+
+// export type pokemonAcciones = ReturnType<typeof seleccionarPokemon>

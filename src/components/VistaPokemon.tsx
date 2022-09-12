@@ -13,7 +13,9 @@ type VistaPokemonDetalleProps = {
 }
 
 const VistaPokemonDetalle:FC<VistaPokemonDetalleProps> = ({pokemonSeleccionado}: VistaPokemonDetalleProps) => {
+
     const dispatch = useDispatch();
+    
     const {data: pokemon, isLoading, refetch} = useQuery<PokemonWithProps>("obtenerPokemon",
         () => getPokemon(pokemonSeleccionado.name),
         {onSuccess: (data) =>{

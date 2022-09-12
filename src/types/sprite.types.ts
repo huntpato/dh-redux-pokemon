@@ -5,7 +5,7 @@
  */
 
  export interface Sprite {
-    "default": string;
+    "front_default": string;
     other: {
         home: {
             front_default: string;
